@@ -35,8 +35,8 @@ fun HomeScreen() {
         val cat = cats[index]
         Column(modifier = Modifier.clickable { selectedCat = cat }) {
             // In HomeScreen.kt
-            Text(text = cat.id ?: "Unknown ID")
-            Text(text = cat.tags?.joinToString() ?: "No tags")
+            Text(text = cat.id)
+            Text(text = cat.tags.joinToString())
             AsyncImage(
                 model = "https://cataas.com/cat/${cat.id}",
                 contentDescription = null
